@@ -176,7 +176,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="lintcode-1805-number-of-different-integers-in-a-string">LintCode 1805. Number of Different Integers in a String</h3>
+<h3 id="leetcode-1805-number-of-different-integers-in-a-string">LeetCode 1805. Number of Different Integers in a String</h3>
 <p><a href="https://leetcode.com/problems/number-of-different-integers-in-a-string/" target="_blank">https://leetcode.com/problems/number-of-different-integers-in-a-string/</a></p>
 <h1 id="solution">Solution</h1>
 <pre><code class="lang-c++">class Solution {
@@ -184,36 +184,33 @@ public:
     int numDifferentIntegers(string word) {
 
         /**
+         * @tag: String Pointer
+         *
          * TC: O(N),
          *     where N is the length of the string.
          *
          * SC: O(N)
          */
 
-        int i = 0, n = word.length();
         unordered_set&lt;string&gt; set;
 
+        int n = word.length();
+        int i = 0;
+
         while (i &lt; n) {
-
-            while (i &lt; n &amp;&amp; !isdigit(word[i])) {
+            if (!isdigit(word[i])) {
                 ++i;
-            }
-
-            if (i == n) {
-                break;
+                continue;
             }
 
             string num;
             while (i &lt; n &amp;&amp; isdigit(word[i])) {
                 if (!(num.empty() &amp;&amp; word[i] == &apos;0&apos;)) {
-                    num.push_back(word[i++]);
-                } else {
-                    ++i;
+                    num.push_back(word[i]);
                 }
+                ++i;
             }
-
-            // Treat empty string as 0.
-            set.emplace(move(num));
+            set.emplace(num);
         }
 
         return set.size();
@@ -255,7 +252,7 @@ public:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1805 Number of Different Integers in a String","level":"1.2.1","depth":2,"previous":{"title":"2021_03_27 Weekly Contest 234","level":"1.2","depth":1,"ref":"","articles":[{"title":"1805 Number of Different Integers in a String","level":"1.2.1","depth":2,"path":"2021_03_27 Weekly Contest 234/1805 Number of Different Integers in a String.md","ref":"2021_03_27 Weekly Contest 234/1805 Number of Different Integers in a String.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_03_27 Weekly Contest 234/1805 Number of Different Integers in a String.md","mtime":"2022-02-27T00:32:54.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-27T00:36:53.960Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1805 Number of Different Integers in a String","level":"1.2.1","depth":2,"previous":{"title":"2021_03_27 Weekly Contest 234","level":"1.2","depth":1,"ref":"","articles":[{"title":"1805 Number of Different Integers in a String","level":"1.2.1","depth":2,"path":"2021_03_27 Weekly Contest 234/1805 Number of Different Integers in a String.md","ref":"2021_03_27 Weekly Contest 234/1805 Number of Different Integers in a String.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_03_27 Weekly Contest 234/1805 Number of Different Integers in a String.md","mtime":"2022-02-27T01:11:44.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-27T01:12:12.341Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
