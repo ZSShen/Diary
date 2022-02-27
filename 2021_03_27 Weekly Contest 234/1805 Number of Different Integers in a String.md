@@ -4,6 +4,7 @@
 https://leetcode.com/problems/number-of-different-integers-in-a-string/
 
 # Solution
+
 ```c++
 class Solution {
 public:
@@ -12,41 +13,34 @@ public:
         /**
          * @tag: String Pointer
          *
-         */
          * TC: O(N),
          *     where N is the length of the string.
          *
          * SC: O(N)
          */
 
-        int i = 0, n = word.length();
         unordered_set<string> set;
 
+        int n = word.length();
+        int i = 0;
+
         while (i < n) {
-
-            while (i < n && !isdigit(word[i])) {
+            if (!isdigit(word[i])) {
                 ++i;
-            }
-
-            if (i == n) {
-                break;
+                continue;
             }
 
             string num;
             while (i < n && isdigit(word[i])) {
                 if (!(num.empty() && word[i] == '0')) {
-                    num.push_back(word[i++]);
-                } else {
-                    ++i;
+                    num.push_back(word[i]);
                 }
+                ++i;
             }
-
-            // Treat empty string as 0.
-            set.emplace(move(num));
+            set.emplace(num);
         }
 
         return set.size();
     }
 };
-
 ```
