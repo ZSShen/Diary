@@ -1,6 +1,6 @@
 
 # Problem
-### LintCode 1805. Number of Different Integers in a String
+### LeetCode 1805. Number of Different Integers in a String
 https://leetcode.com/problems/number-of-different-integers-in-a-string/
 
 # Solution
@@ -10,6 +10,9 @@ public:
     int numDifferentIntegers(string word) {
 
         /**
+         * @tag: String Pointer
+         *
+         */
          * TC: O(N),
          *     where N is the length of the string.
          *
