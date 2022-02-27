@@ -14,7 +14,7 @@ public:
          * @tag: String Pointer
          *
          * TC: O(N),
-         *     where N is the length of the string.
+         *     where N is the length of the string
          *
          * SC: O(N)
          */
