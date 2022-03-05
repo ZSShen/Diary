@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1817 Finding the Users Active Minutes · GitBook</title>
+        <title>1833 Maximum Ice Cream Bars · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1818 Minimum Absolute Sum Difference.html" />
     
-    
-    <link rel="prev" href="1816 Truncate Sentence.html" />
+    <link rel="prev" href="1832 Check if the Sentence Is Pangram.html" />
     
 
     </head>
@@ -161,9 +159,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="1816 Truncate Sentence.html">
+        <li class="chapter " data-level="1.3.1" data-path="../2021_4_10 Weekly Contest 236/1816 Truncate Sentence.html">
             
-                <a href="1816 Truncate Sentence.html">
+                <a href="../2021_4_10 Weekly Contest 236/1816 Truncate Sentence.html">
             
                     
                     1816 Truncate Sentence
@@ -174,9 +172,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="1817 Finding the Users Active Minutes.html">
+        <li class="chapter " data-level="1.3.2" data-path="../2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.html">
             
-                <a href="1817 Finding the Users Active Minutes.html">
+                <a href="../2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.html">
             
                     
                     1817 Finding the Users Active Minutes
@@ -187,9 +185,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="1818 Minimum Absolute Sum Difference.html">
+        <li class="chapter " data-level="1.3.3" data-path="../2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.html">
             
-                <a href="1818 Minimum Absolute Sum Difference.html">
+                <a href="../2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.html">
             
                     
                     1818 Minimum Absolute Sum Difference
@@ -219,9 +217,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.html">
+        <li class="chapter " data-level="1.4.1" data-path="1832 Check if the Sentence Is Pangram.html">
             
-                <a href="../2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.html">
+                <a href="1832 Check if the Sentence Is Pangram.html">
             
                     
                     1832 Check if the Sentence Is Pangram
@@ -232,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.html">
+        <li class="chapter active" data-level="1.4.2" data-path="1833 Maximum Ice Cream Bars.html">
             
-                <a href="../2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.html">
+                <a href="1833 Maximum Ice Cream Bars.html">
             
                     
                     1833 Maximum Ice Cream Bars
@@ -280,7 +278,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1817 Finding the Users Active Minutes</a>
+        <a href=".." >1833 Maximum Ice Cream Bars</a>
     </h1>
 </div>
 
@@ -296,31 +294,34 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="leetcode-1817-finding-the-users-active-minutes">LeetCode 1817. Finding the Users Active Minutes</h3>
-<p><a href="https://leetcode.com/problems/finding-the-users-active-minutes/" target="_blank">https://leetcode.com/problems/finding-the-users-active-minutes/</a></p>
+<h3 id="leetcode-1833-maximum-ice-cream-bars">LeetCode 1833. Maximum Ice Cream Bars</h3>
+<p><a href="https://leetcode.com/contest/weekly-contest-237/problems/maximum-ice-cream-bars/" target="_blank">https://leetcode.com/contest/weekly-contest-237/problems/maximum-ice-cream-bars/</a></p>
 <h1 id="solution">Solution</h1>
 <pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; findingUsersActiveMinutes(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; logs, <span class="hljs-keyword">int</span> k) {
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxIceCream</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; costs, <span class="hljs-keyword">int</span> coins)</span> </span>{
 
         <span class="hljs-comment">/**
-         * @tag: Hash Table
+         * @tag: Sorting
          *
-         * TC: O(N), where
-         *      N is the number of log lines
+         * TC: O(NlogN), where
+         *      N is the number of costs
          *
-         * SC: O(N)
+         * SC: O(1)
          */</span>
 
-        <span class="hljs-built_in">unordered_map</span>&lt;<span class="hljs-keyword">int</span>, <span class="hljs-built_in">unordered_set</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; <span class="hljs-built_in">map</span>;
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span>&amp; <span class="hljs-built_in">log</span> : logs) {
-            <span class="hljs-built_in">map</span>[<span class="hljs-built_in">log</span>[<span class="hljs-number">0</span>]].emplace(<span class="hljs-built_in">log</span>[<span class="hljs-number">1</span>]);
+        sort(costs.begin(), costs.end());
+
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> cost : costs) {
+            coins -= cost;
+            <span class="hljs-keyword">if</span> (coins &lt; <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">break</span>;
+            }
+            ++ans;
         }
 
-        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; ans(k);
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span>&amp; kv : <span class="hljs-built_in">map</span>) {
-            ++ans[kv.second.size() - <span class="hljs-number">1</span>];
-        }
         <span class="hljs-keyword">return</span> ans;
     }
 };
@@ -352,14 +353,10 @@
 
             
                 
-                <a href="1816 Truncate Sentence.html" class="navigation navigation-prev " aria-label="Previous page: 1816 Truncate Sentence">
+                <a href="1832 Check if the Sentence Is Pangram.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1832 Check if the Sentence Is Pangram">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="1818 Minimum Absolute Sum Difference.html" class="navigation navigation-next " aria-label="Next page: 1818 Minimum Absolute Sum Difference">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -368,7 +365,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1817 Finding the Users Active Minutes","level":"1.3.2","depth":2,"next":{"title":"1818 Minimum Absolute Sum Difference","level":"1.3.3","depth":2,"path":"2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.md","ref":"2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.md","articles":[]},"previous":{"title":"1816 Truncate Sentence","level":"1.3.1","depth":2,"path":"2021_4_10 Weekly Contest 236/1816 Truncate Sentence.md","ref":"2021_4_10 Weekly Contest 236/1816 Truncate Sentence.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.md","mtime":"2022-02-27T20:42:20.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T23:12:08.468Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1833 Maximum Ice Cream Bars","level":"1.4.2","depth":2,"previous":{"title":"1832 Check if the Sentence Is Pangram","level":"1.4.1","depth":2,"path":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","ref":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md","mtime":"2022-02-27T20:55:03.649Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T23:12:08.468Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
