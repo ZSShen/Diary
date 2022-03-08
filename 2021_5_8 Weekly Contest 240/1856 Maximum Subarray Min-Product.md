@@ -9,6 +9,15 @@ class Solution {
 public:
     int maxSumMinProduct(vector<int>& nums) {
 
+        /**
+         * @tag Prefix Array, Monotonous Stack
+         *
+         * TC: O(N), where
+         *      N is the number of elements
+         *
+         * SC: O(N)
+         */
+
         int n = nums.size();
 
         stack<int> left_stk, right_stk;
