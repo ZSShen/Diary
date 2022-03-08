@@ -12,7 +12,7 @@ public:
         /**
          * @tag: Binary Search, Sorting, Ordered Set
          *
-         * TC: O(N), where
+         * TC: O(NlogN), where
          *      N is the size of the input vectors
          *
          * SC: O(N)

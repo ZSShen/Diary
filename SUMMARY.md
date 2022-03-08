@@ -14,3 +14,8 @@
 * 2021_4_17 Weekly Contest 237
    * [1832 Check if the Sentence Is Pangram](2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md)
    * [1833 Maximum Ice Cream Bars](2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md)
+
+* 2021_5_8 Weekly Contest 240
+   * [1854 Maximum Population Year](2021_5_8 Weekly Contest 240/1854 Maximum Population Year.md)
+   * [1855 Maximum Distance Between a Pair of Values](2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md)
+   * [1856 Maximum Subarray Min-Product](2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md)
