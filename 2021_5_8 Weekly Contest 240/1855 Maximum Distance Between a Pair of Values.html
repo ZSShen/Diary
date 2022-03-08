@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1816 Truncate Sentence · GitBook</title>
+        <title>1855 Maximum Distance Between a Pair of Values · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1817 Finding the Users Active Minutes.html" />
+    <link rel="next" href="1856 Maximum Subarray Min-Product.html" />
     
+    
+    <link rel="prev" href="1854 Maximum Population Year.html" />
     
 
     </head>
@@ -159,9 +161,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="1816 Truncate Sentence.html">
+        <li class="chapter " data-level="1.3.1" data-path="../2021_4_10 Weekly Contest 236/1816 Truncate Sentence.html">
             
-                <a href="1816 Truncate Sentence.html">
+                <a href="../2021_4_10 Weekly Contest 236/1816 Truncate Sentence.html">
             
                     
                     1816 Truncate Sentence
@@ -172,9 +174,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="1817 Finding the Users Active Minutes.html">
+        <li class="chapter " data-level="1.3.2" data-path="../2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.html">
             
-                <a href="1817 Finding the Users Active Minutes.html">
+                <a href="../2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.html">
             
                     
                     1817 Finding the Users Active Minutes
@@ -185,9 +187,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="1818 Minimum Absolute Sum Difference.html">
+        <li class="chapter " data-level="1.3.3" data-path="../2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.html">
             
-                <a href="1818 Minimum Absolute Sum Difference.html">
+                <a href="../2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.html">
             
                     
                     1818 Minimum Absolute Sum Difference
@@ -262,9 +264,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../2021_5_8 Weekly Contest 240/1854 Maximum Population Year.html">
+        <li class="chapter " data-level="1.5.1" data-path="1854 Maximum Population Year.html">
             
-                <a href="../2021_5_8 Weekly Contest 240/1854 Maximum Population Year.html">
+                <a href="1854 Maximum Population Year.html">
             
                     
                     1854 Maximum Population Year
@@ -275,9 +277,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.html">
+        <li class="chapter active" data-level="1.5.2" data-path="1855 Maximum Distance Between a Pair of Values.html">
             
-                <a href="../2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.html">
+                <a href="1855 Maximum Distance Between a Pair of Values.html">
             
                     
                     1855 Maximum Distance Between a Pair of Values
@@ -288,9 +290,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.html">
+        <li class="chapter " data-level="1.5.3" data-path="1856 Maximum Subarray Min-Product.html">
             
-                <a href="../2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.html">
+                <a href="1856 Maximum Subarray Min-Product.html">
             
                     
                     1856 Maximum Subarray Min-Product
@@ -336,7 +338,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1816 Truncate Sentence</a>
+        <a href=".." >1855 Maximum Distance Between a Pair of Values</a>
     </h1>
 </div>
 
@@ -352,33 +354,36 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="leetcode-1816-truncate-sentence">LeetCode 1816. Truncate Sentence</h3>
-<p><a href="https://leetcode.com/problems/truncate-sentence/" target="_blank">https://leetcode.com/problems/truncate-sentence/</a></p>
+<h3 id="leetcode-1855-maximum-distance-between-a-pair-of-values">LeetCode 1855. Maximum Distance Between a Pair of Values</h3>
+<p><a href="https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/" target="_blank">https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/</a></p>
 <h1 id="solution">Solution</h1>
 <pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">truncateSentence</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s, <span class="hljs-keyword">int</span> k)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxDistance</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums1, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums2)</span> </span>{
 
         <span class="hljs-comment">/**
-         * @tag: String Pointer
+         * @tag: Two Pointers, Binary Search
          *
          * TC: O(N), where
-         *      N is the length of the string
+         *      N is the number of elements
          *
          * SC: O(1)
          */</span>
 
-        <span class="hljs-keyword">int</span> n = s.length();
-        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> n1 = nums1.size(), n2 = nums2.size();
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-number">0</span>;
 
-        <span class="hljs-keyword">while</span> (i &lt; n &amp;&amp; k &gt; <span class="hljs-number">0</span>) {
-            <span class="hljs-keyword">if</span> (s[i] == <span class="hljs-string">&apos; &apos;</span>) {
-                --k;
+        <span class="hljs-keyword">while</span> (i &lt; n1 &amp;&amp; j &lt; n2) {
+            <span class="hljs-keyword">if</span> (nums1[i] &gt; nums2[j]) {
+                ++i;
+            } <span class="hljs-keyword">else</span> {
+                ans = max(ans, j - i);
+                ++j;
             }
-            ++i;
         }
 
-        <span class="hljs-keyword">return</span> i == n ? s : s.substr(<span class="hljs-number">0</span>, i - <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">return</span> ans;
     }
 };
 </code></pre>
@@ -409,8 +414,12 @@
 
             
                 
+                <a href="1854 Maximum Population Year.html" class="navigation navigation-prev " aria-label="Previous page: 1854 Maximum Population Year">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="1817 Finding the Users Active Minutes.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 1817 Finding the Users Active Minutes">
+                
+                <a href="1856 Maximum Subarray Min-Product.html" class="navigation navigation-next " aria-label="Next page: 1856 Maximum Subarray Min-Product">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -421,7 +430,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1816 Truncate Sentence","level":"1.3.1","depth":2,"next":{"title":"1817 Finding the Users Active Minutes","level":"1.3.2","depth":2,"path":"2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.md","ref":"2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.md","articles":[]},"previous":{"title":"2021_4_10 Weekly Contest 236","level":"1.3","depth":1,"ref":"","articles":[{"title":"1816 Truncate Sentence","level":"1.3.1","depth":2,"path":"2021_4_10 Weekly Contest 236/1816 Truncate Sentence.md","ref":"2021_4_10 Weekly Contest 236/1816 Truncate Sentence.md","articles":[]},{"title":"1817 Finding the Users Active Minutes","level":"1.3.2","depth":2,"path":"2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.md","ref":"2021_4_10 Weekly Contest 236/1817 Finding the Users Active Minutes.md","articles":[]},{"title":"1818 Minimum Absolute Sum Difference","level":"1.3.3","depth":2,"path":"2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.md","ref":"2021_4_10 Weekly Contest 236/1818 Minimum Absolute Sum Difference.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_4_10 Weekly Contest 236/1816 Truncate Sentence.md","mtime":"2022-03-05T23:15:05.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-08T02:39:32.222Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1855 Maximum Distance Between a Pair of Values","level":"1.5.2","depth":2,"next":{"title":"1856 Maximum Subarray Min-Product","level":"1.5.3","depth":2,"path":"2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md","ref":"2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md","articles":[]},"previous":{"title":"1854 Maximum Population Year","level":"1.5.1","depth":2,"path":"2021_5_8 Weekly Contest 240/1854 Maximum Population Year.md","ref":"2021_5_8 Weekly Contest 240/1854 Maximum Population Year.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md","mtime":"2022-03-08T02:39:11.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-08T02:39:32.222Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
