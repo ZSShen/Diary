@@ -10,7 +10,7 @@ public:
     int minAbsoluteSumDiff(vector<int>& nums1, vector<int>& nums2) {
 
         /**
-         * @tag: Binary Search, Sorting, Ordered Set
+         * @tag: Binary Search, Sort, Ordered Set
          *
          * TC: O(NlogN), where
          *      N is the size of the input vectors

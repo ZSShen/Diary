@@ -10,7 +10,7 @@ public:
     int maxIceCream(vector<int>& costs, int coins) {
 
         /**
-         * @tag: Sorting
+         * @tag: Sort
          *
          * TC: O(NlogN), where
          *      N is the number of costs

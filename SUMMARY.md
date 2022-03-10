@@ -19,3 +19,7 @@
    * [1854 Maximum Population Year](2021_5_8 Weekly Contest 240/1854 Maximum Population Year.md)
    * [1855 Maximum Distance Between a Pair of Values](2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md)
    * [1856 Maximum Subarray Min-Product](2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md)
+
+* 2021_5_15 Weekly Contest 241
+   * [1863 Sum of All Subset XOR Totals](2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.md)
+   * [1864 Minimum Number of Swaps to Make the Binary String Alternating](2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md)
