@@ -23,3 +23,4 @@
 * 2021_5_15 Weekly Contest 241
    * [1863 Sum of All Subset XOR Totals](2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.md)
    * [1864 Minimum Number of Swaps to Make the Binary String Alternating](2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md)
+   * [1865 Finding Pairs With a Certain Sum](2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.md)
