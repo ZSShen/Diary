@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1832 Check if the Sentence Is Pangram · GitBook</title>
+        <title>1870 Minimum Speed to Arrive on Time · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="1833 Maximum Ice Cream Bars.html" />
+    <link rel="next" href="1871 Jump Game VII.html" />
     
+    
+    <link rel="prev" href="1869 Longer Contiguous Segments of Ones than Zeros.html" />
     
 
     </head>
@@ -217,9 +219,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="1832 Check if the Sentence Is Pangram.html">
+        <li class="chapter " data-level="1.4.1" data-path="../2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.html">
             
-                <a href="1832 Check if the Sentence Is Pangram.html">
+                <a href="../2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.html">
             
                     
                     1832 Check if the Sentence Is Pangram
@@ -230,9 +232,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="1833 Maximum Ice Cream Bars.html">
+        <li class="chapter " data-level="1.4.2" data-path="../2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.html">
             
-                <a href="1833 Maximum Ice Cream Bars.html">
+                <a href="../2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.html">
             
                     
                     1833 Maximum Ice Cream Bars
@@ -378,9 +380,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../2021_5_22 Weekly Contest 242/1869 Longer Contiguous Segments of Ones than Zeros.html">
+        <li class="chapter " data-level="1.7.1" data-path="1869 Longer Contiguous Segments of Ones than Zeros.html">
             
-                <a href="../2021_5_22 Weekly Contest 242/1869 Longer Contiguous Segments of Ones than Zeros.html">
+                <a href="1869 Longer Contiguous Segments of Ones than Zeros.html">
             
                     
                     1869 Longer Contiguous Segments of Ones than Zeros
@@ -391,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../2021_5_22 Weekly Contest 242/1870 Minimum Speed to Arrive on Time.html">
+        <li class="chapter active" data-level="1.7.2" data-path="1870 Minimum Speed to Arrive on Time.html">
             
-                <a href="../2021_5_22 Weekly Contest 242/1870 Minimum Speed to Arrive on Time.html">
+                <a href="1870 Minimum Speed to Arrive on Time.html">
             
                     
                     1870 Minimum Speed to Arrive on Time
@@ -404,9 +406,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../2021_5_22 Weekly Contest 242/1871 Jump Game VII.html">
+        <li class="chapter " data-level="1.7.3" data-path="1871 Jump Game VII.html">
             
-                <a href="../2021_5_22 Weekly Contest 242/1871 Jump Game VII.html">
+                <a href="1871 Jump Game VII.html">
             
                     
                     1871 Jump Game VII
@@ -452,7 +454,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1832 Check if the Sentence Is Pangram</a>
+        <a href=".." >1870 Minimum Speed to Arrive on Time</a>
     </h1>
 </div>
 
@@ -468,27 +470,55 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="leetcode-1832-check-if-the-sentence-is-pangram">LeetCode 1832. Check if the Sentence Is Pangram</h3>
-<p><a href="https://leetcode.com/problems/check-if-the-sentence-is-pangram/" target="_blank">https://leetcode.com/problems/check-if-the-sentence-is-pangram/</a></p>
+<h3 id="leetcode-1870-minimum-speed-to-arrive-on-time">LeetCode 1870. Minimum Speed to Arrive on Time</h3>
+<p><a href="https://leetcode.com/problems/minimum-speed-to-arrive-on-time/" target="_blank">https://leetcode.com/problems/minimum-speed-to-arrive-on-time/</a></p>
 <h1 id="solution">Solution</h1>
 <pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">checkIfPangram</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">minSpeedOnTime</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; dist, <span class="hljs-keyword">double</span> hour)</span> </span>{
 
         <span class="hljs-comment">/**
-         * TC: O(N), where
-         *      N is the length of the string
+         * @tag: Binary Search
+         *
+         * TC: O(NlogN), where
+         *      N is the number of offices
          *
          * SC: O(1)
          */</span>
 
-        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-built_in">map</span>(<span class="hljs-number">26</span>);
+        <span class="hljs-keyword">int</span> l = <span class="hljs-number">1</span>, r = <span class="hljs-number">1e7</span>;
 
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> c : s) {
-            <span class="hljs-built_in">map</span>[c - <span class="hljs-string">&apos;a&apos;</span>] = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">while</span> (l + <span class="hljs-number">1</span> &lt; r) {
+            <span class="hljs-keyword">int</span> m = l + (r - l) / <span class="hljs-number">2</span>;
+            <span class="hljs-keyword">if</span> (canOnTime(dist, hour, m)) {
+                r = m;
+            } <span class="hljs-keyword">else</span> {
+                l = m;
+            }
         }
 
-        <span class="hljs-keyword">return</span> count(<span class="hljs-built_in">map</span>.begin(), <span class="hljs-built_in">map</span>.end(), <span class="hljs-literal">true</span>) == <span class="hljs-number">26</span>;
+        <span class="hljs-keyword">if</span> (canOnTime(dist, hour, l)) {
+            <span class="hljs-keyword">return</span> l;
+        }
+        <span class="hljs-keyword">if</span> (canOnTime(dist, hour, r)) {
+            <span class="hljs-keyword">return</span> r;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">canOnTime</span><span class="hljs-params">(
+        <span class="hljs-keyword">const</span> <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; dist, <span class="hljs-keyword">double</span> hour, <span class="hljs-keyword">int</span> speed)</span> </span>{
+
+        <span class="hljs-keyword">double</span> count = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">int</span> n = dist.size();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; n - <span class="hljs-number">1</span> ; ++i) {
+            count += <span class="hljs-built_in">ceil</span>(<span class="hljs-keyword">static_cast</span>&lt;<span class="hljs-keyword">double</span>&gt;(dist[i]) / speed);
+        }
+        count += <span class="hljs-keyword">static_cast</span>&lt;<span class="hljs-keyword">double</span>&gt;(dist[n - <span class="hljs-number">1</span>]) / speed;
+
+        <span class="hljs-keyword">return</span> count &lt;= hour;
     }
 };
 </code></pre>
@@ -519,8 +549,12 @@
 
             
                 
+                <a href="1869 Longer Contiguous Segments of Ones than Zeros.html" class="navigation navigation-prev " aria-label="Previous page: 1869 Longer Contiguous Segments of Ones than Zeros">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="1833 Maximum Ice Cream Bars.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 1833 Maximum Ice Cream Bars">
+                
+                <a href="1871 Jump Game VII.html" class="navigation navigation-next " aria-label="Next page: 1871 Jump Game VII">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -531,7 +565,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1832 Check if the Sentence Is Pangram","level":"1.4.1","depth":2,"next":{"title":"1833 Maximum Ice Cream Bars","level":"1.4.2","depth":2,"path":"2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md","ref":"2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md","articles":[]},"previous":{"title":"2021_4_17 Weekly Contest 237","level":"1.4","depth":1,"ref":"","articles":[{"title":"1832 Check if the Sentence Is Pangram","level":"1.4.1","depth":2,"path":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","ref":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","articles":[]},{"title":"1833 Maximum Ice Cream Bars","level":"1.4.2","depth":2,"path":"2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md","ref":"2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","mtime":"2022-03-12T02:16:26.283Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T22:32:49.244Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1870 Minimum Speed to Arrive on Time","level":"1.7.2","depth":2,"next":{"title":"1871 Jump Game VII","level":"1.7.3","depth":2,"path":"2021_5_22 Weekly Contest 242/1871 Jump Game VII.md","ref":"2021_5_22 Weekly Contest 242/1871 Jump Game VII.md","articles":[]},"previous":{"title":"1869 Longer Contiguous Segments of Ones than Zeros","level":"1.7.1","depth":2,"path":"2021_5_22 Weekly Contest 242/1869 Longer Contiguous Segments of Ones than Zeros.md","ref":"2021_5_22 Weekly Contest 242/1869 Longer Contiguous Segments of Ones than Zeros.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_5_22 Weekly Contest 242/1870 Minimum Speed to Arrive on Time.md","mtime":"2022-03-12T07:07:14.098Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T22:32:49.244Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
