@@ -24,3 +24,8 @@
    * [1863 Sum of All Subset XOR Totals](2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.md)
    * [1864 Minimum Number of Swaps to Make the Binary String Alternating](2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md)
    * [1865 Finding Pairs With a Certain Sum](2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.md)
+
+* 2021_5_22 Weekly Contest 242
+   * [1869 Longer Contiguous Segments of Ones than Zeros](2021_5_22 Weekly Contest 242/1869 Longer Contiguous Segments of Ones than Zeros.md)
+   * [1870 Minimum Speed to Arrive on Time](2021_5_22 Weekly Contest 242/1870 Minimum Speed to Arrive on Time.md)
+   * [1871 Jump Game VII](2021_5_22 Weekly Contest 242/1871 Jump Game VII.md)
