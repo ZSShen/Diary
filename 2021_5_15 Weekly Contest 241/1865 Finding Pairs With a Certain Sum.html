@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1856 Maximum Subarray Min-Product · GitBook</title>
+        <title>1865 Finding Pairs With a Certain Sum · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="1855 Maximum Distance Between a Pair of Values.html" />
+    <link rel="prev" href="1864 Minimum Number of Swaps to Make the Binary String Alternating.html" />
     
 
     </head>
@@ -262,9 +262,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="1854 Maximum Population Year.html">
+        <li class="chapter " data-level="1.5.1" data-path="../2021_5_8 Weekly Contest 240/1854 Maximum Population Year.html">
             
-                <a href="1854 Maximum Population Year.html">
+                <a href="../2021_5_8 Weekly Contest 240/1854 Maximum Population Year.html">
             
                     
                     1854 Maximum Population Year
@@ -275,9 +275,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="1855 Maximum Distance Between a Pair of Values.html">
+        <li class="chapter " data-level="1.5.2" data-path="../2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.html">
             
-                <a href="1855 Maximum Distance Between a Pair of Values.html">
+                <a href="../2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.html">
             
                     
                     1855 Maximum Distance Between a Pair of Values
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3" data-path="1856 Maximum Subarray Min-Product.html">
+        <li class="chapter " data-level="1.5.3" data-path="../2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.html">
             
-                <a href="1856 Maximum Subarray Min-Product.html">
+                <a href="../2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.html">
             
                     
                     1856 Maximum Subarray Min-Product
@@ -320,9 +320,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.html">
+        <li class="chapter " data-level="1.6.1" data-path="1863 Sum of All Subset XOR Totals.html">
             
-                <a href="../2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.html">
+                <a href="1863 Sum of All Subset XOR Totals.html">
             
                     
                     1863 Sum of All Subset XOR Totals
@@ -333,9 +333,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.html">
+        <li class="chapter " data-level="1.6.2" data-path="1864 Minimum Number of Swaps to Make the Binary String Alternating.html">
             
-                <a href="../2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.html">
+                <a href="1864 Minimum Number of Swaps to Make the Binary String Alternating.html">
             
                     
                     1864 Minimum Number of Swaps to Make the Binary String Alternating
@@ -346,9 +346,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.html">
+        <li class="chapter active" data-level="1.6.3" data-path="1865 Finding Pairs With a Certain Sum.html">
             
-                <a href="../2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.html">
+                <a href="1865 Finding Pairs With a Certain Sum.html">
             
                     
                     1865 Finding Pairs With a Certain Sum
@@ -394,7 +394,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1856 Maximum Subarray Min-Product</a>
+        <a href=".." >1865 Finding Pairs With a Certain Sum</a>
     </h1>
 </div>
 
@@ -410,60 +410,57 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="leetcode-1856-maximum-subarray-min-product">LeetCode 1856. Maximum Subarray Min-Product</h3>
-<p><a href="https://leetcode.com/problems/maximum-subarray-min-product/" target="_blank">https://leetcode.com/problems/maximum-subarray-min-product/</a></p>
+<h3 id="leetcode-1865-finding-pairs-with-a-certain-sum">LeetCode 1865. Finding Pairs With a Certain Sum</h3>
+<p><a href="https://leetcode.com/problems/finding-pairs-with-a-certain-sum/" target="_blank">https://leetcode.com/problems/finding-pairs-with-a-certain-sum/</a></p>
 <h1 id="solution">Solution</h1>
-<pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
+<pre><code class="lang-c++"><span class="hljs-keyword">class</span> FindSumPairs {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxSumMinProduct</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums)</span> </span>{
+    FindSumPairs(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums1, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums2)
+        : nums2(nums2) {
 
-        <span class="hljs-comment">/**
-         * @tag Prefix Array, Monotonous Stack
-         *
-         * TC: O(N), where
-         *      N is the number of elements
-         *
-         * SC: O(N)
-         */</span>
-
-        <span class="hljs-keyword">int</span> n = nums.size();
-
-        <span class="hljs-built_in">stack</span>&lt;<span class="hljs-keyword">int</span>&gt; left_stk, right_stk;
-        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; left_bound(n, <span class="hljs-number">-1</span>), right_bound(n, n);
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = n - <span class="hljs-number">1</span> ; i &lt; n ; ++i, --j) {
-
-            <span class="hljs-keyword">while</span> (!right_stk.empty() &amp;&amp; nums[i] &lt; nums[right_stk.top()]) {
-                <span class="hljs-keyword">int</span> index = right_stk.top();
-                right_bound[index] = i;
-                right_stk.pop();
-            }
-            right_stk.emplace(i);
-
-            <span class="hljs-keyword">while</span> (!left_stk.empty() &amp;&amp; nums[j] &lt; nums[left_stk.top()]) {
-                <span class="hljs-keyword">int</span> index = left_stk.top();
-                left_bound[index] = j;
-                left_stk.pop();
-            }
-            left_stk.emplace(j);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> e : nums1) {
+            ++map1[e];
         }
-
-        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>&gt; prefix(n + <span class="hljs-number">1</span>);
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; n ; ++i) {
-            prefix[i + <span class="hljs-number">1</span>] = prefix[i] + nums[i];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> e : nums2) {
+            ++map2[e];
         }
-
-        <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ans = <span class="hljs-number">0</span>;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; n ; ++i) {
-            <span class="hljs-keyword">int</span> l = left_bound[i] + <span class="hljs-number">1</span>, r = right_bound[i] - <span class="hljs-number">1</span>;
-            ans = max(ans, (prefix[r + <span class="hljs-number">1</span>] - prefix[l]) * nums[i]);
-        }
-
-        <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> mod = <span class="hljs-number">1e9</span> + <span class="hljs-number">7</span>;
-        <span class="hljs-keyword">return</span> ans % mod;
     }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> val)</span> </span>{
+
+        <span class="hljs-keyword">int</span> num = nums2[index];
+        --map2[num];
+
+        <span class="hljs-keyword">if</span> (map2[num] == <span class="hljs-number">0</span>) {
+            map2.erase(num);
+        }
+
+        nums2[index] += val;
+        ++map2[nums2[index]];
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">count</span><span class="hljs-params">(<span class="hljs-keyword">int</span> tot)</span> </span>{
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span>&amp; kv : map1) {
+            <span class="hljs-keyword">int</span> k = kv.first, v = kv.second;
+            sum += v * map2[tot - k];
+        }
+
+        <span class="hljs-keyword">return</span> sum;
+    }
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; nums2;
+    <span class="hljs-built_in">unordered_map</span>&lt;<span class="hljs-keyword">int</span>, <span class="hljs-keyword">int</span>&gt; map1, map2;
 };
+
+<span class="hljs-comment">/**
+ * Your FindSumPairs object will be instantiated and called as such:
+ * FindSumPairs* obj = new FindSumPairs(nums1, nums2);
+ * obj-&gt;add(index,val);
+ * int param_2 = obj-&gt;count(tot);
+ */</span>
 </code></pre>
 
                                 
@@ -492,7 +489,7 @@
 
             
                 
-                <a href="1855 Maximum Distance Between a Pair of Values.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1855 Maximum Distance Between a Pair of Values">
+                <a href="1864 Minimum Number of Swaps to Make the Binary String Alternating.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1864 Minimum Number of Swaps to Make the Binary String Alternating">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -504,7 +501,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1856 Maximum Subarray Min-Product","level":"1.5.3","depth":2,"next":{"title":"2021_5_15 Weekly Contest 241","level":"1.6","depth":1,"ref":"","articles":[{"title":"1863 Sum of All Subset XOR Totals","level":"1.6.1","depth":2,"path":"2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.md","ref":"2021_5_15 Weekly Contest 241/1863 Sum of All Subset XOR Totals.md","articles":[]},{"title":"1864 Minimum Number of Swaps to Make the Binary String Alternating","level":"1.6.2","depth":2,"path":"2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md","ref":"2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md","articles":[]},{"title":"1865 Finding Pairs With a Certain Sum","level":"1.6.3","depth":2,"path":"2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.md","ref":"2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.md","articles":[]}]},"previous":{"title":"1855 Maximum Distance Between a Pair of Values","level":"1.5.2","depth":2,"path":"2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md","ref":"2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md","mtime":"2022-03-08T02:40:10.850Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T02:08:29.987Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1865 Finding Pairs With a Certain Sum","level":"1.6.3","depth":2,"previous":{"title":"1864 Minimum Number of Swaps to Make the Binary String Alternating","level":"1.6.2","depth":2,"path":"2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md","ref":"2021_5_15 Weekly Contest 241/1864 Minimum Number of Swaps to Make the Binary String Alternating.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_5_15 Weekly Contest 241/1865 Finding Pairs With a Certain Sum.md","mtime":"2022-03-12T02:06:06.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-12T02:08:29.987Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
