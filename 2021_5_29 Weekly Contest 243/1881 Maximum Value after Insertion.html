@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1833 Maximum Ice Cream Bars · GitBook</title>
+        <title>1881 Maximum Value after Insertion · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="1832 Check if the Sentence Is Pangram.html" />
+    <link rel="prev" href="1880 Check if Word Equals Summation of Two Words.html" />
     
 
     </head>
@@ -217,9 +217,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="1832 Check if the Sentence Is Pangram.html">
+        <li class="chapter " data-level="1.4.1" data-path="../2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.html">
             
-                <a href="1832 Check if the Sentence Is Pangram.html">
+                <a href="../2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.html">
             
                     
                     1832 Check if the Sentence Is Pangram
@@ -230,9 +230,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="1833 Maximum Ice Cream Bars.html">
+        <li class="chapter " data-level="1.4.2" data-path="../2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.html">
             
-                <a href="1833 Maximum Ice Cream Bars.html">
+                <a href="../2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.html">
             
                     
                     1833 Maximum Ice Cream Bars
@@ -436,9 +436,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../2021_5_29 Weekly Contest 243/1880 Check if Word Equals Summation of Two Words.html">
+        <li class="chapter " data-level="1.8.1" data-path="1880 Check if Word Equals Summation of Two Words.html">
             
-                <a href="../2021_5_29 Weekly Contest 243/1880 Check if Word Equals Summation of Two Words.html">
+                <a href="1880 Check if Word Equals Summation of Two Words.html">
             
                     
                     1880 Check if Word Equals Summation of Two Words
@@ -449,9 +449,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="../2021_5_29 Weekly Contest 243/1881 Maximum Value after Insertion.html">
+        <li class="chapter active" data-level="1.8.2" data-path="1881 Maximum Value after Insertion.html">
             
-                <a href="../2021_5_29 Weekly Contest 243/1881 Maximum Value after Insertion.html">
+                <a href="1881 Maximum Value after Insertion.html">
             
                     
                     1881 Maximum Value after Insertion
@@ -497,7 +497,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1833 Maximum Ice Cream Bars</a>
+        <a href=".." >1881 Maximum Value after Insertion</a>
     </h1>
 </div>
 
@@ -513,35 +513,41 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="leetcode-1833-maximum-ice-cream-bars">LeetCode 1833. Maximum Ice Cream Bars</h3>
-<p><a href="https://leetcode.com/contest/weekly-contest-237/problems/maximum-ice-cream-bars/" target="_blank">https://leetcode.com/contest/weekly-contest-237/problems/maximum-ice-cream-bars/</a></p>
+<h3 id="leetcode-1881-maximum-value-after-insertion">LeetCode 1881. Maximum Value after Insertion</h3>
+<p><a href="https://leetcode.com/problems/maximum-value-after-insertion/" target="_blank">https://leetcode.com/problems/maximum-value-after-insertion/</a></p>
 <h1 id="solution">Solution</h1>
 <pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">maxIceCream</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; costs, <span class="hljs-keyword">int</span> coins)</span> </span>{
+    <span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">maxValue</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s, <span class="hljs-keyword">int</span> x)</span> </span>{
 
         <span class="hljs-comment">/**
-         * @tag: Sort
+         * @tag: Greedy
          *
-         * TC: O(NlogN), where
-         *      N is the number of costs
+         * TC: O(N), where
+         *      N is the string length
          *
          * SC: O(1)
          */</span>
 
-        sort(costs.begin(), costs.end());
+        <span class="hljs-keyword">bool</span> negative = s[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;-&apos;</span>;
 
-        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> n = s.length();
+        <span class="hljs-keyword">int</span> i = negative ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+        <span class="hljs-built_in">string</span> res = negative ? <span class="hljs-string">&quot;-&quot;</span> : <span class="hljs-string">&quot;&quot;</span>;
 
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> cost : costs) {
-            coins -= cost;
-            <span class="hljs-keyword">if</span> (coins &lt; <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">while</span> (i &lt; n) {
+            <span class="hljs-keyword">if</span> (negative ? s[i] - <span class="hljs-string">&apos;0&apos;</span> &gt; x : s[i] - <span class="hljs-string">&apos;0&apos;</span> &lt; x) {
                 <span class="hljs-keyword">break</span>;
             }
-            ++ans;
+            res.push_back(s[i++]);
         }
 
-        <span class="hljs-keyword">return</span> ans;
+        res.push_back(x + <span class="hljs-string">&apos;0&apos;</span>);
+        <span class="hljs-keyword">while</span> (i &lt; n) {
+            res.push_back(s[i++]);
+        }
+
+        <span class="hljs-keyword">return</span> res;
     }
 };
 </code></pre>
@@ -572,7 +578,7 @@
 
             
                 
-                <a href="1832 Check if the Sentence Is Pangram.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1832 Check if the Sentence Is Pangram">
+                <a href="1880 Check if Word Equals Summation of Two Words.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1880 Check if Word Equals Summation of Two Words">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -584,7 +590,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1833 Maximum Ice Cream Bars","level":"1.4.2","depth":2,"next":{"title":"2021_5_8 Weekly Contest 240","level":"1.5","depth":1,"ref":"","articles":[{"title":"1854 Maximum Population Year","level":"1.5.1","depth":2,"path":"2021_5_8 Weekly Contest 240/1854 Maximum Population Year.md","ref":"2021_5_8 Weekly Contest 240/1854 Maximum Population Year.md","articles":[]},{"title":"1855 Maximum Distance Between a Pair of Values","level":"1.5.2","depth":2,"path":"2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md","ref":"2021_5_8 Weekly Contest 240/1855 Maximum Distance Between a Pair of Values.md","articles":[]},{"title":"1856 Maximum Subarray Min-Product","level":"1.5.3","depth":2,"path":"2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md","ref":"2021_5_8 Weekly Contest 240/1856 Maximum Subarray Min-Product.md","articles":[]}]},"previous":{"title":"1832 Check if the Sentence Is Pangram","level":"1.4.1","depth":2,"path":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","ref":"2021_4_17 Weekly Contest 237/1832 Check if the Sentence Is Pangram.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_4_17 Weekly Contest 237/1833 Maximum Ice Cream Bars.md","mtime":"2022-03-12T22:50:51.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-15T04:19:40.076Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1881 Maximum Value after Insertion","level":"1.8.2","depth":2,"previous":{"title":"1880 Check if Word Equals Summation of Two Words","level":"1.8.1","depth":2,"path":"2021_5_29 Weekly Contest 243/1880 Check if Word Equals Summation of Two Words.md","ref":"2021_5_29 Weekly Contest 243/1880 Check if Word Equals Summation of Two Words.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_5_29 Weekly Contest 243/1881 Maximum Value after Insertion.md","mtime":"2022-03-13T00:03:46.885Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-15T04:19:40.076Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
