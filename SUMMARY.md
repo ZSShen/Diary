@@ -29,3 +29,7 @@
    * [1869 Longer Contiguous Segments of Ones than Zeros](2021_5_22 Weekly Contest 242/1869 Longer Contiguous Segments of Ones than Zeros.md)
    * [1870 Minimum Speed to Arrive on Time](2021_5_22 Weekly Contest 242/1870 Minimum Speed to Arrive on Time.md)
    * [1871 Jump Game VII](2021_5_22 Weekly Contest 242/1871 Jump Game VII.md)
+
+* 2021_5_29 Weekly Contest 243
+   * [1880 Check if Word Equals Summation of Two Words](2021_5_29 Weekly Contest 243/1880 Check if Word Equals Summation of Two Words.md)
+   * [1881 Maximum Value after Insertion](2021_5_29 Weekly Contest 243/1881 Maximum Value after Insertion.md)
