@@ -33,3 +33,8 @@
 * 2021_5_29 Weekly Contest 243
    * [1880 Check if Word Equals Summation of Two Words](2021_5_29 Weekly Contest 243/1880 Check if Word Equals Summation of Two Words.md)
    * [1881 Maximum Value after Insertion](2021_5_29 Weekly Contest 243/1881 Maximum Value after Insertion.md)
+
+* 2021_6_5 Weekly Contest 244
+   * [1886 Determine Whether Matrix Can Be Obtained By Rotation](2021_6_5 Weekly Contest 244/1886 Determine Whether Matrix Can Be Obtained By Rotation.md)
+   * [1887 Reduction Operations to Make the Array Elements Equal](2021_6_5 Weekly Contest 244/1887 Reduction Operations to Make the Array Elements Equal.md)
+   * [1888 Minimum Number of Flips to Make the Binary String Alternating](2021_6_5 Weekly Contest 244/1888 Minimum Number of Flips to Make the Binary String Alternating.md)
