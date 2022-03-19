@@ -38,3 +38,8 @@
    * [1886 Determine Whether Matrix Can Be Obtained By Rotation](2021_6_5 Weekly Contest 244/1886 Determine Whether Matrix Can Be Obtained By Rotation.md)
    * [1887 Reduction Operations to Make the Array Elements Equal](2021_6_5 Weekly Contest 244/1887 Reduction Operations to Make the Array Elements Equal.md)
    * [1888 Minimum Number of Flips to Make the Binary String Alternating](2021_6_5 Weekly Contest 244/1888 Minimum Number of Flips to Make the Binary String Alternating.md)
+
+* 2021_6_12 Weekly Contest 245
+   * [1897 Redistribute Characters to Make All Strings Equal](2021_6_12 Weekly Contest 245/1897 Redistribute Characters to Make All Strings Equal.md)
+   * [1898 Maximum Number of Removable Characters](2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.md)
+   * [1899 Merge Triplets to Form Target Triplet](2021_6_12 Weekly Contest 245/1899 Merge Triplets to Form Target Triplet.md)
