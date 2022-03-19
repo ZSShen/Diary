@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>1888 Minimum Number of Flips to Make the Binary String Alternating · GitBook</title>
+        <title>1899 Merge Triplets to Form Target Triplet · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="1887 Reduction Operations to Make the Array Elements Equal.html" />
+    <link rel="prev" href="1898 Maximum Number of Removable Characters.html" />
     
 
     </head>
@@ -481,9 +481,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="1886 Determine Whether Matrix Can Be Obtained By Rotation.html">
+        <li class="chapter " data-level="1.9.1" data-path="../2021_6_5 Weekly Contest 244/1886 Determine Whether Matrix Can Be Obtained By Rotation.html">
             
-                <a href="1886 Determine Whether Matrix Can Be Obtained By Rotation.html">
+                <a href="../2021_6_5 Weekly Contest 244/1886 Determine Whether Matrix Can Be Obtained By Rotation.html">
             
                     
                     1886 Determine Whether Matrix Can Be Obtained By Rotation
@@ -494,9 +494,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="1887 Reduction Operations to Make the Array Elements Equal.html">
+        <li class="chapter " data-level="1.9.2" data-path="../2021_6_5 Weekly Contest 244/1887 Reduction Operations to Make the Array Elements Equal.html">
             
-                <a href="1887 Reduction Operations to Make the Array Elements Equal.html">
+                <a href="../2021_6_5 Weekly Contest 244/1887 Reduction Operations to Make the Array Elements Equal.html">
             
                     
                     1887 Reduction Operations to Make the Array Elements Equal
@@ -507,9 +507,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9.3" data-path="1888 Minimum Number of Flips to Make the Binary String Alternating.html">
+        <li class="chapter " data-level="1.9.3" data-path="../2021_6_5 Weekly Contest 244/1888 Minimum Number of Flips to Make the Binary String Alternating.html">
             
-                <a href="1888 Minimum Number of Flips to Make the Binary String Alternating.html">
+                <a href="../2021_6_5 Weekly Contest 244/1888 Minimum Number of Flips to Make the Binary String Alternating.html">
             
                     
                     1888 Minimum Number of Flips to Make the Binary String Alternating
@@ -539,9 +539,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="../2021_6_12 Weekly Contest 245/1897 Redistribute Characters to Make All Strings Equal.html">
+        <li class="chapter " data-level="1.10.1" data-path="1897 Redistribute Characters to Make All Strings Equal.html">
             
-                <a href="../2021_6_12 Weekly Contest 245/1897 Redistribute Characters to Make All Strings Equal.html">
+                <a href="1897 Redistribute Characters to Make All Strings Equal.html">
             
                     
                     1897 Redistribute Characters to Make All Strings Equal
@@ -552,9 +552,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="../2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.html">
+        <li class="chapter " data-level="1.10.2" data-path="1898 Maximum Number of Removable Characters.html">
             
-                <a href="../2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.html">
+                <a href="1898 Maximum Number of Removable Characters.html">
             
                     
                     1898 Maximum Number of Removable Characters
@@ -565,9 +565,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../2021_6_12 Weekly Contest 245/1899 Merge Triplets to Form Target Triplet.html">
+        <li class="chapter active" data-level="1.10.3" data-path="1899 Merge Triplets to Form Target Triplet.html">
             
-                <a href="../2021_6_12 Weekly Contest 245/1899 Merge Triplets to Form Target Triplet.html">
+                <a href="1899 Merge Triplets to Form Target Triplet.html">
             
                     
                     1899 Merge Triplets to Form Target Triplet
@@ -613,7 +613,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >1888 Minimum Number of Flips to Make the Binary String Alternating</a>
+        <a href=".." >1899 Merge Triplets to Form Target Triplet</a>
     </h1>
 </div>
 
@@ -629,52 +629,37 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="problem">Problem</h1>
-<h3 id="leetcode-1888-minimum-number-of-flips-to-make-the-binary-string-alternating">LeetCode 1888. Minimum Number of Flips to Make the Binary String Alternating</h3>
-<p><a href="https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/" target="_blank">https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/</a></p>
+<h3 id="leetcode-1899-merge-triplets-to-form-target-triplet">LeetCode 1899. Merge Triplets to Form Target Triplet</h3>
+<p><a href="https://leetcode.com/problems/merge-triplets-to-form-target-triplet/" target="_blank">https://leetcode.com/problems/merge-triplets-to-form-target-triplet/</a></p>
 <h1 id="solution">Solution</h1>
 <pre><code class="lang-c++"><span class="hljs-keyword">class</span> Solution {
 <span class="hljs-keyword">public</span>:
-    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">minFlips</span><span class="hljs-params">(<span class="hljs-built_in">string</span> s)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">mergeTriplets</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt;&amp; tuples, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; target)</span> </span>{
 
         <span class="hljs-comment">/**
-         * @tag: Greedy, Sliding Window
+         * @tag: Greedy
          *
          * TC: O(N), where
-         *      N is the string length
+         *      N is number of tuples
          *
          * SC: O(1)
          */</span>
 
-        <span class="hljs-keyword">int</span> n = s.length();
-        <span class="hljs-keyword">int</span> nn = n &lt;&lt; <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; res(<span class="hljs-number">3</span>);
 
-        <span class="hljs-keyword">int</span> count_0 = <span class="hljs-number">0</span>, count_1 = <span class="hljs-number">0</span>;
-        <span class="hljs-keyword">int</span> ans = INT_MAX;
-
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; nn ; ++i) {
-            <span class="hljs-keyword">if</span> ((i &amp; <span class="hljs-number">0x1</span>) == <span class="hljs-number">0x0</span>) {
-                count_0 += s[i % n] != <span class="hljs-string">&apos;0&apos;</span>;
-                count_1 += s[i % n] != <span class="hljs-string">&apos;1&apos;</span>;
-            } <span class="hljs-keyword">else</span> {
-                count_0 += s[i % n] != <span class="hljs-string">&apos;1&apos;</span>;
-                count_1 += s[i % n] != <span class="hljs-string">&apos;0&apos;</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> <span class="hljs-keyword">auto</span>&amp; tuple : tuples) {
+            <span class="hljs-keyword">if</span> (tuple[<span class="hljs-number">0</span>] &gt; target[<span class="hljs-number">0</span>] ||
+                tuple[<span class="hljs-number">1</span>] &gt; target[<span class="hljs-number">1</span>] ||
+                tuple[<span class="hljs-number">2</span>] &gt; target[<span class="hljs-number">2</span>]) {
+                <span class="hljs-keyword">continue</span>;
             }
 
-            <span class="hljs-keyword">if</span> (i &gt;= n - <span class="hljs-number">1</span>) {
-                ans = min(ans, min(count_0, count_1));
-
-                <span class="hljs-keyword">int</span> j = i - n + <span class="hljs-number">1</span>;
-                <span class="hljs-keyword">if</span> ((j &amp; <span class="hljs-number">0x1</span>) == <span class="hljs-number">0x0</span>) {
-                    count_0 -= s[j] != <span class="hljs-string">&apos;0&apos;</span>;
-                    count_1 -= s[j] != <span class="hljs-string">&apos;1&apos;</span>;
-                } <span class="hljs-keyword">else</span> {
-                    count_0 -= s[j] != <span class="hljs-string">&apos;1&apos;</span>;
-                    count_1 -= s[j] != <span class="hljs-string">&apos;0&apos;</span>;
-                }
-            }
+            res[<span class="hljs-number">0</span>] = max(res[<span class="hljs-number">0</span>], tuple[<span class="hljs-number">0</span>]);
+            res[<span class="hljs-number">1</span>] = max(res[<span class="hljs-number">1</span>], tuple[<span class="hljs-number">1</span>]);
+            res[<span class="hljs-number">2</span>] = max(res[<span class="hljs-number">2</span>], tuple[<span class="hljs-number">2</span>]);
         }
 
-        <span class="hljs-keyword">return</span> ans;
+        <span class="hljs-keyword">return</span> res == target;
     }
 };
 </code></pre>
@@ -705,7 +690,7 @@
 
             
                 
-                <a href="1887 Reduction Operations to Make the Array Elements Equal.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1887 Reduction Operations to Make the Array Elements Equal">
+                <a href="1898 Maximum Number of Removable Characters.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 1898 Maximum Number of Removable Characters">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -717,7 +702,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1888 Minimum Number of Flips to Make the Binary String Alternating","level":"1.9.3","depth":2,"next":{"title":"2021_6_12 Weekly Contest 245","level":"1.10","depth":1,"ref":"","articles":[{"title":"1897 Redistribute Characters to Make All Strings Equal","level":"1.10.1","depth":2,"path":"2021_6_12 Weekly Contest 245/1897 Redistribute Characters to Make All Strings Equal.md","ref":"2021_6_12 Weekly Contest 245/1897 Redistribute Characters to Make All Strings Equal.md","articles":[]},{"title":"1898 Maximum Number of Removable Characters","level":"1.10.2","depth":2,"path":"2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.md","ref":"2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.md","articles":[]},{"title":"1899 Merge Triplets to Form Target Triplet","level":"1.10.3","depth":2,"path":"2021_6_12 Weekly Contest 245/1899 Merge Triplets to Form Target Triplet.md","ref":"2021_6_12 Weekly Contest 245/1899 Merge Triplets to Form Target Triplet.md","articles":[]}]},"previous":{"title":"1887 Reduction Operations to Make the Array Elements Equal","level":"1.9.2","depth":2,"path":"2021_6_5 Weekly Contest 244/1887 Reduction Operations to Make the Array Elements Equal.md","ref":"2021_6_5 Weekly Contest 244/1887 Reduction Operations to Make the Array Elements Equal.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_6_5 Weekly Contest 244/1888 Minimum Number of Flips to Make the Binary String Alternating.md","mtime":"2022-03-18T19:28:00.062Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-19T21:30:32.727Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1899 Merge Triplets to Form Target Triplet","level":"1.10.3","depth":2,"previous":{"title":"1898 Maximum Number of Removable Characters","level":"1.10.2","depth":2,"path":"2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.md","ref":"2021_6_12 Weekly Contest 245/1898 Maximum Number of Removable Characters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2021_6_12 Weekly Contest 245/1899 Merge Triplets to Form Target Triplet.md","mtime":"2022-03-19T21:24:41.951Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-19T21:30:32.727Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
